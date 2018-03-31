@@ -1,0 +1,34 @@
+<ion-header no-shadow>
+  <ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="secondary">{{ 'TUTORIAL_SKIP_BUTTON' | translate}}</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides pager="true" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
+    
+    <ion-slide>
+      <img src="assets/img/ppdpp1.jpg" class="slide-image" />
+      <h2 class="slide-title">{{ 'ppdpp' | translate }}</h2>
+      <p class="slide-title">{{ 'welcome to Applikasi Kepegawaian PPDPP' | translate }}</p></ion-slide>
+    <ion-slide>
+      <img src="assets/img/download.png" class="slide-image" />
+      <h2 class="slide-title">{{ 'ppdpp' | translate }}</h2>
+      <p class="slide-title">Visi dan Misi  <br><br>
+Visi<br>
+Menjadi lembaga penyedia layanan pembiayaan perumahan dan pengelola dana yang profesional dan handal dalam mendukung pemenuhan kebutuhan perumahan bagi rakyat.<br><br>
+Misi <br>
+1. Memberikan layanan penyaluran FLPP yang unggul dan tepat sasaran;<br>
+2. Mengoptimalkan pengelolaan dan pengembangan dana bergulir untuk mendukung kesinambungan pembiayaan perumahan rakyat;<br>
+3. Mengembangkan dan mengoptimalkan dukungan teknologi informasi dalam meningkatkan efektivitas layanan FLPP dan pengelolaan dana; dan<br>
+4. Meningkatkan kapasitas kelembagaan melalui penerapan prinsip tata kelola organisasi yang baik dengan dukungan SDM yang professional dan berintegritas.<br>
+</p>
+      <button ion-button icon-end large clear (click)="startApp()">
+        {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
